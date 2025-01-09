@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    height: 100%;
+    position: relative;
+    min-width: 800px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.text {
+    display: block;
+    color: #000000;
+    text-align: center;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 120px;
+    text-transform: uppercase;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    line-height: 145px;
+    letter-spacing: 4px;
+    font-weight: 800;
+    padding-right: 255px;
+}
+
+.text::after {
+    content: "*";
+    color: #000;
+}
+
+.text:hover::before {
+    content: "На самом деле нет.\AВажнее &mdash; научиться ошибаться.";
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 35px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    text-transform: none;
+    white-space: pre;
+    max-width: 746px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    padding: 36px 44px;
+    margin-top: 123px;
+    margin-left: 222px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 16px 0 black;
+    position: absolute;
+}
+
+.text:hover {
+    color: #4c4c4c;
+    cursor: default;
+}
+
+video {
+    width: 1788px;
+    height: 1010px;
+    padding-left: 8px;
+    padding-top: 11px;
+}
